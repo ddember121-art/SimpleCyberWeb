@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Admin Dashboard | CyBook</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="admin-dashboard-page">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="CyBook home"><span class="brand-mark" aria-hidden="true">C</span> CyBook</a>
+    <div class="admin-header-actions">
+      <button class="button button-secondary" id="sign-out" type="button">Sign out</button>
+    </div>
+  </header>
+  <main class="admin-main page-width">
+    <div class="admin-dashboard-heading">
+      <div>
+        <p class="eyebrow">CYBOOK ADMINISTRATION</p>
+        <h1>Admin Dashboard</h1>
+        <p>Public-site activity and submitted quiz results.</p>
+      </div>
+    </div>
+    <section aria-label="Visitor and quiz statistics">
+      <div class="admin-stats">
+        <article class="admin-stat">
+          <p class="admin-stat-label">Total Visitors</p>
+          <p class="admin-stat-value" id="total-visitors">—</p>
+          <p class="admin-stat-detail">Unique visitors recorded</p>
+        </article>
+        <article class="admin-stat">
+          <p class="admin-stat-label">New Visitors</p>
+          <p class="admin-stat-value" id="new-visitors">—</p>
+          <p class="admin-stat-detail">First visits today</p>
+        </article>
+        <article class="admin-stat">
+          <p class="admin-stat-label"><span class="admin-stat-indicator" aria-hidden="true"></span>Online Now</p>
+          <p class="admin-stat-value" id="online-now">—</p>
+          <p class="admin-stat-detail">Active within the last 90 seconds</p>
+        </article>
+        <article class="admin-stat">
+          <p class="admin-stat-label">Quiz Attempts</p>
+          <p class="admin-stat-value" id="quiz-attempts">—</p>
+          <p class="admin-stat-detail">Submissions saved in the database</p>
+        </article>
+      </div>
+      <p class="admin-status" id="dashboard-status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="admin-section" aria-labelledby="quiz-results-title">
+      <h2 id="quiz-results-title">Quiz Results</h2>
+      <p class="admin-section-description">Recent results submitted through the public CyBook quiz.</p>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th scope="col">Nickname</th><th scope="col">Quiz Score</th><th scope="col">Date Completed</th></tr></thead>
+          <tbody id="quiz-results"><tr><td class="admin-empty" colspan="3">Loading results…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <section class="admin-section" aria-labelledby="change-password-title">
+      <h2 id="change-password-title">Change temporary password</h2>
+      <p class="admin-section-description">Use a unique password with at least 14 characters. Changing it signs out all active admin sessions.</p>
+      <form class="admin-password-form" id="password-form">
+        <label for="current-password">Current password</label>
+        <input id="current-password" name="current_password" type="password" autocomplete="current-password" maxlength="128" required>
+        <label for="new-password">New password</label>
+        <input id="new-password" name="new_password" type="password" autocomplete="new-password" minlength="14" maxlength="128" required>
+        <label for="confirm-password">Confirm new password</label>
+        <input id="confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="14" maxlength="128" required>
+        <button class="button button-primary" type="submit">Change password</button>
+        <p class="admin-status" id="password-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><span>CyBook</span></footer>
+  <script src="/admin.js" defer></script>
+</body>
+</html>

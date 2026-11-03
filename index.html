@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101216">
+  <meta name="description" content="Cybook is a public website for students that provides information on how you can protect yourself and your love ones from online threats on the internet.">
+  <title>CyberSafe: A Cybersecurity Awareness Website for Students</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-brand-group">
+      <a class="admin-link" href="/admin/login" aria-label="Admin login" title="Admin login">@</a>
+      <a class="brand" href="#home" aria-label="CyBook home" data-i18n-aria="homeAria"><span class="brand-mark" aria-hidden="true">C</span> CyBook</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n="menu">Menu</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#resources" data-i18n="navResources">Resources</a>
+      <a href="#references" data-i18n="navReferences">References</a>
+      <button class="nav-start" id="nav-start" type="button" data-i18n="navStart">Start learning</button>
+    </nav>
+  </header>
+
+  <!-- Main or landing view of my Web -->
+  <main>
+    <section id="home" class="view landing-view">
+      <section class="hero page-width" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title"><span data-i18n="heroTitle">Cyber Ready</span></h1>
+          <h1 id="hero-title2"><span data-i18n="heroTitle2">Starts Here</span></h1>
+          <p class="hero-description" data-i18n="heroDescription">CyBook is a public simple Website for students that provides information on how they can protect their self and their loved ones through online</p>
+          <button class="button button-primary" id="start-learning" type="button"><span data-i18n="startLearning">Start Learning Here</span> <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <!-- This is my course overview -->
+      <section class="intro page-width" aria-label="Course overview" data-i18n-aria="courseOverview">
+          <h2 class="intro-heading">IN THIS SIMPLE WEBSITE, YOU CAN...</h2>
+       <div class="intro-item">
+          <h2 data-i18n="introRiskTitle">Understand the risks</h2>
+          <p data-i18n="introRiskText">Learn how scams, phishing, and malicious software can reach you.</p>
+       </div>
+
+       <div class="intro-item">
+          <h2 data-i18n="introHabitTitle">Build safer habits</h2>
+          <p data-i18n="introHabitText">Practice simple ways to protect your accounts and information.</p>
+       </div>
+
+       <div class="intro-item">
+          <h2 data-i18n="introChoiceTitle">Make informed choices</h2>
+          <p data-i18n="introChoiceText">Use your knowledge to respond calmly and report harmful activity.</p>
+       </div>
+      </section>
+
+    </section>
+
+    <section id="dashboard" class="view app-view page-width" hidden>
+      <button class="back-link" id="back-home" type="button" data-i18n="backHome">← Back to home</button>
+      <div class="section-heading"><p class="eyebrow" data-i18n="dashboardEyebrow">YOUR LEARNING DASHBOARD</p><h1 data-i18n="dashboardTitle">Choose a module</h1><p data-i18n="dashboardDescription">Start anywhere. Each module has practical tips you can use right away.</p></div>
+      <div class="module-grid">
+        <article class="module-card"><span class="module-number" data-i18n="moduleNotice">NOTICE</span><h2 data-i18n="moduleThreatsTitle">Common Online Threats</h2><p data-i18n="moduleThreatsText">Recognize phishing, malware, scams, and attempts to misuse your identity.</p><button class="button button-secondary open-module" data-module="threats" type="button"><span data-i18n="clickHere">Click Here</span> <span aria-hidden="true">→</span></button></article>
+        <article class="module-card"><span class="module-number" data-i18n="moduleProtect">PROTECT</span><h2 data-i18n="moduleProtectTitle">Protect Yourself</h2><p data-i18n="moduleProtectText">Make accounts, devices, and personal information harder to misuse.</p><button class="button button-secondary open-module" data-module="protect" type="button"><span data-i18n="clickHere">Click Here</span> <span aria-hidden="true">→</span></button></article>
+        <article class="module-card"><span class="module-number" data-i18n="moduleRespond">RESPOND</span><h2 data-i18n="moduleOtherTitle">Personal Information and Privacy</h2><p data-i18n="moduleOtherText">Understand personal information and privacy rights under Philippine law.</p><button class="button button-secondary open-module" data-module="other" type="button"><span data-i18n="clickHere">Click Here</span> <span aria-hidden="true">→</span></button></article>
+      </div>
+      <section class="quiz-promo"><div><p class="eyebrow" data-i18n="quizPromoEyebrow">CHECK YOUR KNOWLEDGE</p><h2 data-i18n="quizPromoTitle">Ready for a quick review?</h2><p data-i18n="quizPromoText">Ten questions, immediate explanations, and no personal details beyond a nickname.</p></div><button class="button button-primary" id="begin-quiz" type="button"><span data-i18n="takeQuiz">Take the quiz</span> <span aria-hidden="true">→</span></button></section>
+    </section>
+
+    <section id="lesson-view" class="view app-view page-width" hidden>
+      <button class="back-link" id="back-dashboard" type="button" data-i18n="backDashboard">← Back to dashboard</button>
+      <article class="lesson-panel">
+        <p class="eyebrow" id="lesson-kicker"></p><h1 id="lesson-title"></h1><p class="lesson-lead" id="lesson-lead"></p>
+        <div id="lesson-content" class="lesson-content"></div>
+        <div class="lesson-controls"><button class="button button-secondary" id="previous-module" type="button">← Previous module</button><button class="button button-primary" id="next-module" type="button">Next module →</button></div>
+      </article>
+    </section>
+
+    <section id="quiz-view" class="view app-view page-width" hidden>
+      <button class="back-link" id="quiz-back" type="button" data-i18n="backDashboard">← Back to dashboard</button>
+      <section id="nickname-panel" class="quiz-panel narrow-panel">
+        <p class="eyebrow" data-i18n="quizDuration">10 QUESTIONS · ABOUT 3 MINUTES</p><h1 data-i18n="quizTitle">Quick knowledge check</h1>
+        <p data-i18n="nicknameInstruction">Choose a nickname to label your result. It will be saved as your username. Please do not use your full name or other personal information.</p>
+        <form id="nickname-form">
+          <label for="nickname" data-i18n="nicknameLabel">Nickname</label><input id="nickname" name="nickname" maxlength="24" autocomplete="nickname" required>
+          <p class="form-hint" data-i18n="nicknameHint">Use 1–24 letters, numbers, spaces, hyphens, or underscores.</p>
+          <button class="button button-primary" type="submit"><span data-i18n="startQuiz">Start the quiz</span> <span aria-hidden="true">→</span></button>
+          <p class="form-error" id="nickname-error" role="alert"></p>
+        </form>
+      </section>
+      <section id="questions-panel" class="quiz-panel" hidden>
+        <div class="quiz-topline"><div><p class="eyebrow" data-i18n="quizBasics">CYBERSECURITY BASICS</p><h1 data-i18n="knowledgeCheck">Knowledge check</h1></div><span id="question-count" class="question-count"></span></div>
+        <p id="quiz-error" class="form-error" role="alert"></p>
+        <form id="quiz-form"><div id="question-list"></div><button class="button button-primary submit-quiz" type="submit"><span data-i18n="submitAnswers">Submit answers</span> <span aria-hidden="true">→</span></button></form>
+      </section>
+      <section id="quiz-result" class="quiz-panel result-panel" aria-live="polite" hidden>
+        <p class="eyebrow" data-i18n="quizComplete">QUIZ COMPLETE</p><h1 id="result-title"></h1><p id="save-status"></p><div id="answer-review"></div>
+        <div class="result-actions"><button class="button button-primary" id="retake-quiz" type="button" data-i18n="retakeQuiz">Retake quiz</button><button class="button button-secondary" id="result-dashboard" type="button" data-i18n="backDashboard">Back to dashboard</button></div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="site-footer landing-footer">
+    <section class="additional-information" aria-labelledby="additional-information-title2">
+      <div class="additional-information-inner">
+        <h2 id="additional-information-title2" >Additional Information</h2>
+        <div class="additional-information-grid">
+          <section id="about" class="additional-information-column">
+            <h3 class="additional-information-column-heading" data-i18n="navAbout">About</h3>
+            <p data-i18n="aboutText">This simple Website is for Students to gain some knowledge about cybersecurity.</p>
+          </section>
+          <section id="resources" class="additional-information-column">
+            <h3 class="additional-information-column-heading" data-i18n="navResources">Resources</h3>
+            <div class="resource-grid">
+              <a class="resource-card" href="https://dict.gov.ph/" target="_blank" rel="noopener noreferrer"><span data-i18n="philippines">PHILIPPINES</span><strong data-i18n="dictName">Department of Information and Communications Technology</strong><small><span data-i18n="visitDict">Visit DICT</span> <span aria-hidden="true">↗</span></small></a>
+              <a class="resource-card" href="https://www.cisa.gov/secure-our-world" target="_blank" rel="noopener noreferrer"><span data-i18n="cyberGuidance">CYBERSECURITY GUIDANCE</span><strong>CISA Secure Our World</strong><small><span data-i18n="visitCisa">Visit CISA</span> <span aria-hidden="true">↗</span></small></a>
+              <a class="resource-card" href="https://privacy.gov.ph/" target="_blank" rel="noopener noreferrer"><span data-i18n="philippines">PHILIPPINES</span><strong data-i18n="npcName">National Privacy Commission</strong><small><span data-i18n="visitNpc">Visit NPC</span> <span aria-hidden="true">↗</span></small></a>
+            </div>
+          </section>
+          <section id="references" class="additional-information-column references">
+            <h3 class="additional-information-column-heading" data-i18n="navReferences">References</h3>
+            <ul>
+              <li><a data-i18n="refPhishing" href="https://www.cisa.gov/secure-our-world/recognize-and-report-phishing" target="_blank" rel="noopener noreferrer">Recognize and Report Phishing</a> <span data-i18n="cisaOrg">— Cybersecurity and Infrastructure Security Agency (CISA).</span></li>
+              <li><a data-i18n="refPasswords" href="https://www.cisa.gov/secure-our-world/use-strong-passwords" target="_blank" rel="noopener noreferrer">Use Strong Passwords</a> <span data-i18n="cisaShort">— CISA.</span></li>
+              <li><a data-i18n="refMfa" href="https://www.cisa.gov/secure-our-world/turn-mfa" target="_blank" rel="noopener noreferrer">Turn on MFA</a> <span data-i18n="cisaShort">— CISA.</span></li>
+              <li><a data-i18n="refUpdates" href="https://www.cisa.gov/secure-our-world/update-software" target="_blank" rel="noopener noreferrer">Update Software</a> <span data-i18n="cisaShort">— CISA.</span></li>
+              <li><a data-i18n="refPrivacy" href="https://privacy.gov.ph/data-privacy-act/" target="_blank" rel="noopener noreferrer">Data Privacy Act of 2012</a> <span data-i18n="npcOrg">— National Privacy Commission (NPC).</span></li>
+              <li><a data-i18n="dictName" href="https://dict.gov.ph/" target="_blank" rel="noopener noreferrer">Department of Information and Communications Technology</a> <span data-i18n="dictOfficial">— DICT official website.</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+    <div class="footer-copyright">
+      <span>CyBook <span aria-hidden="true">·</span> <span data-i18n="footerMotto">Be Safe through CyBook</span></span>
+    </div>
+  </footer>
+   <script src="script.js" defer></script>
+</body>
+</html>
